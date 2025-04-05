@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="p-4 bg-light rounded shadow">
+    <h1 class="mb-4 text-primary">{{ name() }}</h1>
+
+    <dl class="row">
+      <dt class="col-sm-3">Nombre:</dt>
+      <dd class="col-sm-9">{{ name() }}</dd>
+
+      <dt class="col-sm-3">Edad:</dt>
+      <dd class="col-sm-9">{{ age() }}</dd>
+
+      <dt class="col-sm-3">Método:</dt>
+      <dd class="col-sm-9">{{ getHeroDescription() }}</dd>
+
+      <dt class="col-sm-3">Capitalizado:</dt>
+      <dd class="col-sm-9">{{ name().toUpperCase() }}</dd>
+    </dl>
+
+    <div class="mt-4">
+      <button (click)="changeHero()" class="btn btn-primary me-2">
+        Cambiar nombre
+      </button>
+
+      <button class="btn btn-success me-2" (click)="age.set(60)">
+        Cambiar edad
+      </button>
+
+      <button (click)="resetForm()" class="btn btn-outline-secondary">
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
